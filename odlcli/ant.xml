@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project odlcli with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Users/WaheedAli/Desktop/odlcli.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="sdn.cli.odl.ODL_Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ commons-codec-1.9.jar java-json.jar sqlite-jdbc-3.7.2.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="F:/eclipse-Perl/workspace/odlcli/bin"/>
+            <zipfileset dir="F:\eclipse-Perl\workspace\odlcli\Lib" includes="commons-codec-1.9.jar"/>
+            <zipfileset dir="F:\eclipse-Perl\workspace\odlcli\Lib" includes="java-json.jar"/>
+            <zipfileset dir="F:\eclipse-Perl\workspace\odlcli\Lib" includes="sqlite-jdbc-3.7.2.jar"/>
+        </jar>
+    </target>
+</project>
