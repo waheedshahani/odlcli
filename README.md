@@ -1,1 +1,1 @@
-# odlcli
+This REST based client was developed to help traditional network engineers to input Cisco like commands while on the back end it was pushing open flow rules to openflow supported devices. This client consumes services from Opendaylight SDN controller. 
